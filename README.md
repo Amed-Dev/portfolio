@@ -9,7 +9,7 @@
 > Click [aquí](https://amed-dev.github.io/portfolio/)
 
 <h1 align="center">
-  portfolio - v1
+  amedperda - v1
 </h1>
 
 ![demo](./assets/img/prev-vw.png)
