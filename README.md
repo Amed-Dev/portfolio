@@ -3,7 +3,8 @@
 </div>
 
 # Mi sitio web personal con HTML, CSS y JavaScript
-
+>[!IMPORTANT]
+> Navegador
 > [!NOTE]
 > Live demo
 > Click [aquí](https://amed-dev.github.io/portfolio/)
@@ -13,5 +14,3 @@
 </h1>
 
 ![demo](./assets/img/prev-vw.png)
->[!WARNING]
-> Navegador(Desktop)
