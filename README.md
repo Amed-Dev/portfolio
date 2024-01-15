@@ -4,7 +4,8 @@
 
 # Mi sitio web personal con HTML, CSS y JavaScript
 >[!IMPORTANT]
-> Navegador
+> Plataformas: Navegador(Desktop)
+
 > [!NOTE]
 > Live demo
 > Click [aquí](https://amed-dev.github.io/portfolio/)
