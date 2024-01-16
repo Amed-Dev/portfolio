@@ -3,8 +3,9 @@
 </div>
 
 # Mi sitio web personal con HTML, CSS y JavaScript
+
 >[!IMPORTANT]
-> Plataformas: Navegador(Desktop)
+> Plataformas: Navegador(Only Desktop)
 
 > [!NOTE]
 > Live demo
