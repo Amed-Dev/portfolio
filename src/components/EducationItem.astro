@@ -1,0 +1,98 @@
+---
+import Arrow from "./icons/Arrow.astro";
+interface Props {
+  durationDate: string;
+  degreeInfo: string[];
+  rank: string;
+  description: string;
+  techs: string[];
+}
+const { durationDate, description, rank, degreeInfo, techs } = Astro.props;
+---
+
+<li class="mb-12 p-4 transition-all">
+  <div
+    class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+    <div
+      class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-4 lg:block lg:group-hover:bg-white/[.03] lg:group-hover:shadow-[0_3px_5px_rgba(141,242,255,0.1)] lg:group-hover:drop-shadow-lg">
+    </div>
+    <header
+      class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 col-span-2">
+      {durationDate}
+    </header>
+    <div class="z-10 col-span-6">
+      <h3 class="font-medium leading-snug text-slate-200">
+        <div>
+          <a
+            class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+            href="https://app.aluracursos.com/program/certificate/5813460d-de2c-4bb0-a002-9194ea48581e"
+            target="_blank"
+            rel="noreferrer">
+            <span
+              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+            ></span>
+            <span>
+              {degreeInfo[0]} ·
+              <span class="inline-block">
+                {degreeInfo[1]}
+
+                <Arrow />
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="text-slate-500" aria-hidden="true">{rank}</div>
+      </h3>
+      <p class="mt-2 text-sm leading-normal">
+        {description}
+      </p>
+      <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+        {
+          techs.map((tech) => (
+            <li class="mr-1.5 mt-2">
+              <div class="flex items-center rounded-full bg-teal-400/10 py-1 px-3 text-xs font-medium leading-5 text-teal-300">
+                {tech}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</li>
+
+<!-- <style>
+  /* .card {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: transparent;
+    border-radius: 16px;
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border: 1px solid transparent;
+    margin-bottom: 1rem;
+  } */
+
+  /* .card:hover {
+    box-shadow: 0 3px 5px rgba(141, 242, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.02);
+  } */
+
+  /* .card:hover span {
+    --tw-text-opacity: 1;
+    color: rgb(53 197 210 / var(--tw-text-opacity));
+  }
+  .card:hover {
+    box-shadow: 0 3px 5px rgba(141, 242, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.02);
+  }
+
+  .card:hover span {
+    --tw-text-opacity: 1;
+    color: rgb(53 197 210 / var(--tw-text-opacity));
+  } */
+</style> -->

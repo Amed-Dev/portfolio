@@ -1,0 +1,90 @@
+---
+import Github from "../icons/Github.astro";
+import Mail from "../icons/Mail.astro";
+import LinkdIn from "../icons/LinkedIn.astro";
+import CodePen from "../icons/CodePen.astro";
+import SocialPill from "../SocialPill.astro";
+const navItems = [
+  {
+    title: "Sobre mi",
+    href: "#sobre-mi",
+  },
+  {
+    title: "Educación",
+    href: "#educacion",
+  },
+  {
+    title: "Proyectos",
+    href: "#proyectos",
+  },
+];
+---
+
+<header
+  class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+  <div>
+    <h1 class="text-4xl font-bold tracking-tight text-teal-300 sm:text-5xl">
+      <a href="/">Amed Pereda</a>
+    </h1>
+    <h2
+      class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+      Desarrollador Full Stack
+    </h2>
+    <p class="mt-4 max-w-xs leading-normal">
+      Creo experiencias web innovadoras y escalables.
+    </p>
+    <p class="mt-4 max-w-[25rem]">
+      <span class="font-medium text-amber-200">+1 año de experiencia</span> en desarrollo
+      <span class="text-slate-50 font-medium">FrontEnd</span> y
+      <span class="text-slate-50 font-medium">BackEnd</span>. Especilizado en la creación de aplicaciones web únicas. 
+    </p>
+    <nav class="nav hidden lg:block">
+      <ul class="mt-12 w-max">
+        {
+          navItems.map((link, index) => (
+            <li>
+              <a
+                href={link.href}
+                class="group flex items-center py-3 "
+                class={index === 0 ? "active" : ""}>
+                <span class="nav-indicator mr-4 h-[.15rem] w-8 bg-[#475669] transition-all group-hover:w-16 group-hover:bg-[#f5deb2] group-focus-visible:w-16 group-focus-visible:bg-[#f5deb2] motion-reduce:transition-none" />
+                <span class="nav-text text-xs font-bold uppercase tracking-widest text-[#475669] group-hover:text-[#f5deb2] group-focus-visible:text-[#f5deb2]">
+                  {link.title}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+
+  <ul class="ml-1 mt-8 flex items-center" aria-label="Redes sociales">
+    <SocialPill href="mailto:intiprda@gmail.com">
+      <Mail class="size-6" />
+    </SocialPill>
+    <SocialPill href="https://codepen.io/Amedboydeveloper/">
+      <CodePen class="size-6" />
+    </SocialPill>
+    <SocialPill href="https://github.com/Amed-Dev">
+      <Github class="size-6" />
+    </SocialPill>
+    <SocialPill
+      href="https://www.linkedin.com/in/amed-inti-pereda-gomez-2214a1298/">
+      <LinkdIn class="size-6" />
+    </SocialPill>
+  </ul>
+</header>
+
+<style>
+  .active .nav-indicator {
+    --tw-text-opacity: 1;
+    background-color: rgb(245 222 178 / var(--tw-bg-opacity));
+    width: 4rem;
+  }
+
+  .active .nav-text {
+    --tw-text-opacity: 1;
+    color: rgb(245 222 178 / var(--tw-text-opacity));
+  }
+</style>

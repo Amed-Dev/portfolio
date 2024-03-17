@@ -1,0 +1,31 @@
+---
+import EducationItem from "../EducationItem.astro";
+const EDUCATION = [
+  {
+    durationDate: "May 2023 - Presente",
+    degreeInfo: ["Desarrollo Web", "SENATI"],
+    rank: "Web Developer",
+    description:
+      "Actualmente estudiando la carrera de Desarrollo de Aplicaciones Web, cursando ya el 3er ciclo; aprendiendo tecnologías Front-end y Back-end construyendo pequeños proyectos para mejorar mis conocimientos y habilidades",
+    techs: ["HTML", "CSS", "JavaScript", "PHP"],
+  },
+  {
+    durationDate: "Mar - Sept 2023",
+    degreeInfo: ["Backend Development", "Alura Latam"],
+    rank: "Programador Jr.",
+    description:
+      "Tuve la oportunidad de participar en el programa One de Oracle Next Education, empece en mayo del 2023 y luego de dos mese de preselección logre obtener mi acceso a la formación Backend con instructores expertos en el desarrollo de Software; culmine la formación en septiembre de este año.",
+    techs: ["Java", "Spring boot", "MySql"],
+  },
+];
+---
+
+<section
+  id="educacion"
+  class="sctn-ind lg:mb-36 lg:scroll-mt-24"
+  aria-label="educacion">
+  <h2 class="text-sm uppercase font-bold text-slate-200 mb-4">Educación</h2>
+  <ol class="education-list group/list">
+    {EDUCATION.map((education) => <EducationItem {...education} />)}
+  </ol>
+</section>

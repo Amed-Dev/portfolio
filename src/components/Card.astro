@@ -1,0 +1,26 @@
+---
+import TechsPills from "./TechsPills.astro"
+interface Props {
+  description: string;
+  techs: string[];
+  cardGridStyles:string;
+}
+const { description, techs, cardGridStyles } = Astro.props;
+---
+
+<div
+  class={`card p-2 col-span-1 row-span-1 grid place-items-center ${cardGridStyles}`}>
+  <h3 class="text-rose-300 text-center">{description}</h3>
+  <TechsPills techs={techs}/>
+</div>
+
+<style>
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+</style>

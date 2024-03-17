@@ -1,0 +1,17 @@
+---
+interface Props {
+  techs: string[];
+  classname?: string;
+}
+const { techs, classname } = Astro.props;
+---
+
+<ul class={`${classname} flex flex-wrap`} aria-label="Technologies used:">
+  {
+    techs.map((tech) => (
+      <li class="flex items-center rounded-full bg-teal-400/10 py-1 px-3 text-xs font-medium leading-5 text-cyan-300 mr-1.5 mt-2">
+        {tech}
+      </li>
+    ))
+  }
+</ul>

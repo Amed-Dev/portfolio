@@ -1,0 +1,84 @@
+---
+import TechsPills from "../TechsPills.astro";
+import Arrow from "../icons/Arrow.astro";
+
+const PROYECTS = [
+  {
+    infoProyect: ["Encriptador de texto", "Alura"],
+    description: "Una encriptador de texto con requisitos básicos y responsive",
+    img: "/p-e-t-a.png",
+    techs: ["HTML", "CSS","JavaScrcipt"]
+  },
+  {
+    infoProyect: ["Landing page","Juguería Flory"],
+    description: "Una landing page diseñado para un negocio de comida en 2022",
+    img: "/l-p-j-f.png",
+    techs: ["HTML", "CSS","JavaScrcipt"]
+  }
+];
+---
+
+<section
+  id="proyectos"
+  aria-label="proyectos"
+  class="sctn-ind lg:mb-36 lg:scroll-mt-24">
+  <h2 class="text-sm uppercase font-bold text-slate-200 mb-4">Proyectos</h2>
+  <ul class="projects-list">
+  {
+    PROYECTS.map((proyect)=>(
+    <li class="p-4 border border-transparent mb-12">
+      <div
+        class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+        <div
+          class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-4 lg:block lg:group-hover:bg-white/[.03] lg:group-hover:shadow-[0_3px_5px_rgba(141,242,255,0.1)] lg:group-hover:drop-shadow-lg ">
+        </div>
+        <div class="z-10 sm:order-2 sm:col-span-6">
+          <h3>
+            <a
+              class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
+              href="https://jugueria-flory.github.io/web-site/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="amedpereda.com (v2)">
+              <span
+                class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+              ></span>
+              <span>
+                {proyect.infoProyect[0]} .
+                <!-- -->
+                <span class="inline-block">
+                  {proyect.infoProyect[1]}
+                  <Arrow />
+                </span>
+              </span>
+            </a>
+          </h3>
+          <p class="mt-2 text-sm leading-normal">
+            {proyect.description}
+          </p>
+          <a
+            class="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
+            href="https://jugueria-flory.github.io/web-site/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="6779 stars on GitHub">
+          </a>
+          <TechsPills techs={proyect.techs} />
+        </div>
+        <img
+          alt=""
+          loading="lazy"
+          width="200"
+          height="48"
+          decoding="async"
+          data-nimg="1"
+          class="rounded border-2 border-slate-200/10 transition sm:order-1 sm:col-span-2 sm:translate-y-1"
+          style="color: transparent"
+          src={proyect.img}
+        />
+      </div>
+    </li>
+    ))
+  }
+  </ul>
+</section>

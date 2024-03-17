@@ -1,0 +1,77 @@
+---
+import Card from "../Card.astro";
+---
+
+<section
+  id="sobre-mi"
+  class="sctn-ind lg:mb-36 lg:scroll-mt-24"
+  aria-label="About me">
+  <div class="mb-4">
+    <h2 class="text-sm font-bold uppercase text-slate-200">Sobre mi</h2>
+  </div>
+  <div>
+    <div class="img-box">
+      <img src="/profile.jpeg" alt="Amed Pereda" />
+    </div>
+    <p class="mb-4">
+      En 2019, decidí intentar crear una página personalizada, ví algunos
+      tutoriales de YouTube y caí de cabeza en la madriguera de la codificación
+      y el desarrollo web. Si avanzamos hasta el día de hoy, he tenido el
+      privilegio de crear un sitio web para una Start-Up.
+    </p>
+    <p class="mb-4">
+      Mi enfoque principal en estos días es seguir aprendiendo para poder crear
+      productos y liderar proyectos profesionales.
+    </p>
+
+    <p class="mb-4">
+      En mi tiempo libre, cuando no estoy frente a la computadora normalmente
+      estoy caminado por el campo, saliendo con mi familia o tocando la
+      guitarra.
+    </p>
+  </div>
+
+  <div class="mt-24">
+    <h2 class="uppercase text-sky-300">Habilidades</h2>
+  </div>
+  <div
+    class="mx-auto grid grid-cols-1 gap-4 px-8 mt-8 md:grid-cols-2 xl:grid-cols-3">
+    <Card
+      description="Desarrollo FrontEnd"
+      techs={[
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Astro",
+        "Bootstrap",
+        "Tailwind",
+      ]}
+      cardGridStyles="xl:col-span-1 xl:row-span-2"
+    />
+
+    <Card
+      description="Programación Backend"
+      techs={["Java", "Spring Boot", "Python", "PHP", "MySql"]}
+      cardGridStyles="xl:col-span-2 xl:row-span-1"
+    />
+
+    <Card
+      description="UX/UI"
+      techs={["Figma"]}
+      cardGridStyles="xl:col-span-1 xl:row-span-1"
+    />
+
+    <Card
+      description="Herramientas"
+      techs={["Git", "Github", "npm", "Terminal"]}
+      cardGridStyles="xl:col-span-1 xl:row-span-1"
+    />
+
+    <Card
+      description="SoftSkills"
+      techs={["Trabajo en equipo", "Resiliencia", "Compromiso", "Creatividad"]}
+      cardGridStyles="xl:col-span-3 xl:row-span-1"
+    />
+  </div>
+</section>
